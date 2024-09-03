@@ -1,0 +1,262 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #FFE4E1, #FFB6C1); /* Light pink gradient */
+    color: #4A154B; /* Dark plum for better readability */
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(255, 182, 193, 0.8); /* Light pink navbar with transparency */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-logo img {
+    height: 40px;
+}
+
+.navbar-icons .nav-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-left: 15px;
+    transition: transform 0.2s ease;
+}
+
+.navbar-icons .nav-icon:hover {
+    transform: scale(1.2);
+}
+
+.navbar-toggle {
+    background: none;
+    border: none;
+    color: #4A154B; /* Dark plum */
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.navbar-toggle:hover {
+    transform: rotate(90deg);
+}
+
+/* Sidebar Styling */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 182, 193, 0.95); /* Light pink semi-transparent */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #4A154B; /* Dark plum */
+    display: block;
+    transition: color 0.3s;
+}
+
+.sidebar a:hover {
+    color: #D95D77; /* Darker pink for hover effect */
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 30px;
+    margin-left: 50px;
+    color: #4A154B; /* Dark plum */
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1002;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #FFE4E1; /* Light pink background */
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    color: #4A154B; /* Dark plum text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    color: #4A154B; /* Dark plum */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #D95D77; /* Darker pink */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Footer Styling */
+footer {
+    background-color: rgba(255, 182, 193, 0.8); /* Light pink semi-transparent */
+    color: #4A154B; /* Dark plum */
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navbar-logo {
+        margin-bottom: 10px;
+    }
+
+    .navbar-icons {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Page Content Styling */
+.page-content {
+    padding: 20px;
+    text-align: center;
+    margin-top: 100px; /* Adjust for fixed navbar */
+    background-color: #FFFFFF; /* White for contrast */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #4A154B; /* Dark plum text */
+}
+
+/* Product and Cart Styling */
+.product-area, .cart-area {
+    background-color: #FFE4E1; /* Light pink */
+    padding: 20px;
+    border-radius: 10px;
+    color: #4A154B; /* Dark plum text */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.product-area .item-card {
+    background-color: #FFB6C1; /* Pink */
+    padding: 20px;
+    border: 2px solid #FF69B4; /* Dark pink border */
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.product-area .item-card:hover {
+    transform: scale(1.05);
+    background-color: #FF69B4; /* Change to dark pink on hover */
+    color: #FFFFFF; /* White text on hover */
+}
+
+.cart-area {
+    border: 2px solid #FF69B4; /* Dark pink border */
+    transition: transform 0.2s ease;
+}
+
+.cart-area h2 {
+    color: #FF69B4; /* Dark pink heading */
+}
+
+.cart-area:hover {
+    transform: scale(1.05);
+    background-color: #FF69B4; /* Dark pink on hover */
+    color: #FFFFFF; /* White text on hover */
+}
+
+.total-cost {
+    color: #4A154B; /* Dark plum text */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Separator Styling */
+.separator {
+    width: 2px;
+    background-color: #FF69B4; /* Dark pink separator */
+    margin: 0 20px;
+}
+
+/* Button Styling */
+.submit-btn, .add-to-cart, .apply-now {
+    background-color: #FF69B4; /* Dark pink button */
+    color: #FFFFFF; /* White text */
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-btn:hover, .add-to-cart:hover, .apply-now:hover {
+    background-color: #D95D77; /* Darker pink on hover */
+    transform: translateY(-2px);
+}
+
+/* Form Styling */
+.form-group input, .form-group textarea {
+    padding: 10px;
+    border: 1px solid #FF69B4; /* Dark pink border */
+    border-radius: 5px;
+    background-color: #FFFFFF; /* White background */
+    color: #4A154B; /* Dark plum text */
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #D95D77; /* Darker pink border on focus */
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    color: #4A154B; /* Dark plum text */
+}
+
+.form-group input::placeholder, .form-group textarea::placeholder {
+    color: #b0b0b0; /* Light grey placeholder */
+}
